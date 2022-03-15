@@ -25,9 +25,10 @@ public class BasicCalculator {
         return number1 * number2;
     }
 
-
     // división
-
-
-    // modulo
+    public Long div(Long number1, Long number2) {
+        logger.info( "Divide {} / {}", number1, number2 );
+        return number1 / number2;
+    }
+    
 }
