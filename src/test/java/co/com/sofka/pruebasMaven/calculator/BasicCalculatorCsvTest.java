@@ -55,6 +55,25 @@ class BasicCalculatorCsvTest {
                 () -> first + " + " + second + " should equal " + expectedResult);
     }
 
+    // div
+
+    @DisplayName("Testing several div")
+    @ParameterizedTest(name = "{0} / {1} = {2}")
+    @CsvSource({
+            "0,    1,   0",
+            "1,    2,   0.5",
+            "49,  49,   1",
+            "1,  100,   0.01"
+    })
+    public void severalDiv(Double first, Double second, Double expectedResult) {
+        assertEquals(expectedResult, basicCalculator.div(first, second),
+                () -> first + " + " + second + " should equal " + expectedResult);
+    }
+
+    // mod
+
+
+
 
 
 
