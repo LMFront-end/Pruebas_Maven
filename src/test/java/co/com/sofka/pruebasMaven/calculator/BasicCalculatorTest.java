@@ -76,10 +76,19 @@ class BasicCalculatorTest {
 
     }
 
-    // div failed
+    // div fail
     @Test
-    @DisplayName("Testing subt: 2 * 8 = 16")
-    void divFailed() {
+    @DisplayName("Testing divFail: 3 / 0 = 0")
+    void divFail() {
+
+        assertThrows(IllegalArgumentException.class, () -> {
+
+            // Arrange
+            Double number1 = Double.valueOf(3L);
+            Double number2 = Double.valueOf(0L);
+            //Throwable expectedValue = new IllegalArgumentException("cannot be divided by 0");
+            basicCalculator.div(number1, number2);
+        });
 
     }
 
