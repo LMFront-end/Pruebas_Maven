@@ -30,14 +30,19 @@ public class BasicCalculator {
         if(number2 == 0){
             //logger.error("cannot be divided by 0");
             throw new IllegalArgumentException("cannot be divided by 0");
-
         }
+
         logger.info( "Divide {} / {}", number1, number2 );
         return number1 / number2;
     }
 
     // modulo
-    public Long mod(Long number1, Long number2) {
+    public Long mod(Long number1, Long number2) throws IllegalArgumentException {
+        if(number2 == 0){
+            //logger.error("cannot be divided by 0");
+            throw new IllegalArgumentException("cannot compute module 0");
+        }
+
         logger.info( "Module {} % {}", number1, number2 );
         return number1 % number2;
     }
