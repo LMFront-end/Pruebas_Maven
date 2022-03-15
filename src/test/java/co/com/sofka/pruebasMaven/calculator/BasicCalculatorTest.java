@@ -43,7 +43,19 @@ class BasicCalculatorTest {
     }
 
     @Test
+    @DisplayName("Testing subt: 2 * 8 = 16")
     void mult() {
+
+        // Arrange
+        Long number1 = 2L;
+        Long number2 = 8L;
+        Long expectedValue = 16L;
+
+        // Act
+        Long result = basicCalculator.mult(number1, number2);
+
+        // Assert
+        assertEquals(expectedValue, result);
     }
 
     @Test
