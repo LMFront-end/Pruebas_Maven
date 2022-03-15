@@ -30,5 +30,10 @@ public class BasicCalculator {
         logger.info( "Divide {} / {}", number1, number2 );
         return number1 / number2;
     }
-    
+
+    // modulo
+    public Long mod(Long number1, Long number2) {
+        logger.info( "Module {} % {}", number1, number2 );
+        return number1 % number2;
+    }
 }
