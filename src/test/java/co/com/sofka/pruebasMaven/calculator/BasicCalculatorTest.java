@@ -27,7 +27,19 @@ class BasicCalculatorTest {
     }
 
     @Test
+    @DisplayName("Testing subt: 4 - 1 = 3")
     void subt() {
+
+        // Arrange
+        Long number1 = 4L;
+        Long number2 = 1L;
+        Long expectedValue = 3L;
+
+        // Act
+        Long result = basicCalculator.subt(number1, number2);
+
+        // Assert
+        assertEquals(expectedValue, result);
     }
 
     @Test
