@@ -43,7 +43,7 @@ class BasicCalculatorTest {
     }
 
     @Test
-    @DisplayName("Testing subt: 2 * 8 = 16")
+    @DisplayName("Testing mult: 2 * 8 = 16")
     void mult() {
 
         // Arrange
@@ -58,11 +58,40 @@ class BasicCalculatorTest {
         assertEquals(expectedValue, result);
     }
 
+    // div sucess
     @Test
-    void div() {
+    @DisplayName("Testing divSucess: 10 / 2 = 5")
+    void divSucess() {
+
+        // Arrange
+        Double number1 = Double.valueOf(10L);
+        Double number2 = Double.valueOf(2L);
+        Double expectedValue = Double.valueOf(5L);
+
+        // Act
+        Double result = basicCalculator.div(number1, number2);
+
+        // Assert
+        assertEquals(expectedValue, result);
+
     }
 
+    // div failed
     @Test
-    void mod() {
+    @DisplayName("Testing subt: 2 * 8 = 16")
+    void divFailed() {
+
+    }
+
+    // mod sucess
+    @Test
+    @DisplayName("Testing subt: 2 * 8 = 16")
+    void modSucess() {
+    }
+
+    // mod filed
+    @Test
+    @DisplayName("Testing subt: 2 * 8 = 16")
+    void modFiled() {
     }
 }
