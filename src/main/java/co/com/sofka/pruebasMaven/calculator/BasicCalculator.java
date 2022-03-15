@@ -26,7 +26,7 @@ public class BasicCalculator {
     }
 
     // Divide
-    public Double div(Long number1, Long number2) throws IllegalArgumentException {
+    public Double div(Double number1, Double number2) throws IllegalArgumentException {
         if(number2 == 0){
             //logger.error("cannot be divided by 0");
             throw new IllegalArgumentException("cannot be divided by 0");

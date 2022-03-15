@@ -45,7 +45,7 @@ public class PruebasMavenApplication {
 		System.out.println( number1 + " * " + number2 + " = " + result );
 
 		// Divide
-		Double resultDiv = calculator.div( number1, number2 );
+		Double resultDiv = calculator.div( Double.valueOf(number1) , Double.valueOf(number2));
 		System.out.println( number1 + " / " + number2 + " = " + resultDiv );
 
 		// Module
