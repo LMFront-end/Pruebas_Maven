@@ -86,7 +86,6 @@ class BasicCalculatorTest {
         Double number2 = Double.valueOf(0L);
 
         assertThrows(IllegalArgumentException.class, () -> {
-            //Throwable expectedValue = new IllegalArgumentException("cannot be divided by 0");
             basicCalculator.div(number1, number2);
         });
 
@@ -111,7 +110,15 @@ class BasicCalculatorTest {
 
     // mod fail
     @Test
-    @DisplayName("Testing subt: 2 * 8 = 16")
+    @DisplayName("Testing mod: 2 % 0 = 0")
     void modFiled() {
+
+        // Arrange
+        Long number1 = 2L;
+        Long number2 = 0L;
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            basicCalculator.mod(number1, number2);
+        });
     }
 }
