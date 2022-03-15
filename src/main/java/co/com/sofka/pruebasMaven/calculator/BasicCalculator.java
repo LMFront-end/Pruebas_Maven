@@ -20,6 +20,10 @@ public class BasicCalculator {
     }
 
     // multiplicación
+    public Long mult(Long number1, Long number2) {
+        logger.info( "Multiplying {} * {}", number1, number2 );
+        return number1 * number2;
+    }
 
 
     // división
