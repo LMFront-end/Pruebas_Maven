@@ -72,6 +72,19 @@ class BasicCalculatorCsvTest {
 
     // mod
 
+    @DisplayName("Testing several mod")
+    @ParameterizedTest(name = "{0} % {1} = {2}")
+    @CsvSource({
+            "0,    1,   0",
+            "1,    2,   1",
+            "49,  49,   0",
+            "1,  100,   1"
+    })
+    public void severalMod(Long first, Long second, Long expectedResult) {
+        assertEquals(expectedResult, basicCalculator.mod(first, second),
+                () -> first + " + " + second + " should equal " + expectedResult);
+    }
+
 
 
 
